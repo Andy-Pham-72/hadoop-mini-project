@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Final Mapper Python Script - Will map out vin_number and tuple of ( ).
+# Mapper Python Script - Will map out vin_number and tuple of ( ).
 
 import sys
 
