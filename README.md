@@ -10,7 +10,7 @@ The report is stored as CSV files in HDFS with following schema:
 <img width="907" alt="Screen Shot 2022-02-01 at 11 48 56 PM" src="https://user-images.githubusercontent.com/70767722/152094774-cb30a003-7962-4352-bd79-c38612ac7613.png">
 
 ## Learning Objectives
-* Utilitze MapReduce jobs in Pythons 
+* Utilitzing MapReduce jobs in Python. 
 * Leveraging a MapReduce processing model to process large scale data and break down a complex problem into smaller tasks.
 * Getting familiar with VirtualBox environment.
 
