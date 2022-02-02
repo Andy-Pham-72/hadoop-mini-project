@@ -26,7 +26,8 @@ From your local terminal run `upload_files.sh` to upload to the root directory i
 From the Sandbox's Web Shell Client, logging into as `root` account and let's put the `data.csv` into hadoop file system:
 
 ```bash
-$ hadoop fs -put tmp/data.csv /test_dir
+$ hadoop fs -mkdir test_dir
+$ hadoop fs -put data.csv /user/root/test_dir  
 ```
 
 double check the uploaded file in the Ambari `Files View`:
