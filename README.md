@@ -25,7 +25,7 @@ From your **Local Terminal** run [upload_files.sh](https://github.com/Andy-Pham-
 ![Screen Shot 2022-02-01 at 11 56 15 PM](https://user-images.githubusercontent.com/70767722/152095515-79f4aacb-7aea-47ee-94a2-e13ffa39000d.png)
 
 ## Step 2:
-From the Sandbox's Web Shell Client, logging into as `root` account and let's put the `data.csv` into hadoop file system:
+From the Sandbox's Web Shell Client - `http://localhost:4200`, logging into as `root` account and let's put the `data.csv` into hadoop file system:
 
 ```bash
 $ hadoop fs -mkdir test_dir
