@@ -50,3 +50,7 @@ After all the MapReduce jobs were successfully executed, let's check the output:
 
 * From `make_year_count` folder:
 * ![Screen Shot 2022-02-02 at 12 08 41 AM](https://user-images.githubusercontent.com/70767722/152096396-e229f5e8-57a9-45a6-8134-769be1049ef7.png)
+
+**NOTE**:
+- In the default Python enviroment is version 2 in VirtualBox so when you should either update the python env to 3 (or above) or tailor your code to fit the python 2.
+For example, Python 2 doesn't support F-string like Python 3 which can cause error when you run the MapReduce python script. Therefore, you have to use %s acts a placeholder for a string while %d acts as a placeholder for a number. [More detail](https://stackoverflow.com/questions/4288973/whats-the-difference-between-s-and-d-in-python-string-formatting/56382046)
