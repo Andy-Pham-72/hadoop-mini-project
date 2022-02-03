@@ -33,8 +33,10 @@ $ hadoop fs -put data.csv /user/root/test_dir
 ```
 
 Double check the uploaded file in the Ambari `Files View`:
+* Note: the owner of the folder and file must be `root` !
 
-![Screen Shot 2022-02-02 at 12 02 14 AM](https://user-images.githubusercontent.com/70767722/152095881-93c1f30a-d5b8-4235-ad5f-9c7babe4c3f7.png)
+<img width="1789" alt="Screen Shot 2022-02-03 at 3 24 21 PM" src="https://user-images.githubusercontent.com/70767722/152423159-470f148e-4d83-4a7d-801e-9db402a68ea2.png">
+
 
 ## Step 3: 
 From the Sandbox's Web Shell Client, run file [auto.sh](https://github.com/Andy-Pham-72/hadoop-mini-project/blob/master/auto.sh):
