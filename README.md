@@ -53,6 +53,8 @@ After all the MapReduce jobs were successfully executed, let's check the output:
 * From `make_year_count` folder:
 * ![Screen Shot 2022-02-02 at 12 08 41 AM](https://user-images.githubusercontent.com/70767722/152096396-e229f5e8-57a9-45a6-8134-769be1049ef7.png)
 
+---------
+
 **NOTE**:
 - In the default Python enviroment is version 2 in VirtualBox so when you should either update the python env to 3 (or above) or tailor your code to fit the python 2.
 
