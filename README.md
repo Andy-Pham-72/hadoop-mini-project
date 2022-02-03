@@ -16,6 +16,9 @@ The report is stored as CSV files in HDFS with following schema:
 
 ## Setting up Hadoop using Hortonworks Hadoop Sandbox
 * Please follow the [Instruction video to set up Hadoop with Hortonworks Hadoop Sandbox (Cloudera)](https://www.youtube.com/watch?v=735yx2Eak48).
+    1. Install Virtual Box 
+    2. Install Cloudera HDP
+ 
 * Extra material how to move files from Linux env to HDFS and backward in [Cloudera Hadoop Virtual Machine](https://www.youtube.com/watch?v=PLEt8FuDnjk&t=409s).
 
 ## Step 1:
