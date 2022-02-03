@@ -1,7 +1,7 @@
 #!/bin/bash
 
 hadoop jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar \
-# Note we have to use the linux directory for python files. not from the HDFS directory
+# Note we have to use the linux directory for python files which we uploaded in the Step 1
 -file /tmp/mapper1.py -mapper  "python mapper1.py" \
 -file /tmp/reducer1.py -reducer "python reducer1.py" \
 -input /user/root/test_dir/data.csv -output /user/root/test_dir/output/all_accidents
