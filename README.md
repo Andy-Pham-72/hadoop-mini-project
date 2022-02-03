@@ -15,8 +15,8 @@ The report is stored as CSV files in HDFS with following schema:
 * Getting familiar with VirtualBox environment.
 
 ## Setting up Hadoop using Hortonworks Hadoop Sandbox
-* Please follow the [Instruction video to set up Hadoop with Hortonworks Hadoop Sandbox (Cloudera)](https://www.youtube.com/watch?v=735yx2Eak48)
-* Extra material how to move files from Linux env to HDFS and backward in [Cloudera Hadoop Virtual Machine](https://www.youtube.com/watch?v=PLEt8FuDnjk&t=409s) 
+* Please follow the [Instruction video to set up Hadoop with Hortonworks Hadoop Sandbox (Cloudera)](https://www.youtube.com/watch?v=735yx2Eak48).
+* Extra material how to move files from Linux env to HDFS and backward in [Cloudera Hadoop Virtual Machine](https://www.youtube.com/watch?v=PLEt8FuDnjk&t=409s).
 
 ## Step 1:
 From your **Local Terminal** run [upload_files.sh](https://github.com/Andy-Pham-72/hadoop-mini-project/blob/master/upload_files.sh) to upload to the root directory in the VirtualBox:
@@ -57,3 +57,5 @@ After all the MapReduce jobs were successfully executed, let's check the output:
 - In the default Python enviroment is version 2 in VirtualBox so when you should either update the python env to 3 (or above) or tailor your code to fit the python 2.
 
 For example, Python 2 doesn't support F-string like Python 3 which can cause error when you run the MapReduce python script. Therefore, you have to use %s acts a placeholder for a string while %d acts as a placeholder for a number. [More detail](https://stackoverflow.com/questions/4288973/whats-the-difference-between-s-and-d-in-python-string-formatting/56382046)
+
+- The easiest way to check if your Python script is compatiable with python 2 is to run `python mapper1.py` or other python script in Sandbox's Web Shell Client - `http://localhost:4200`. If there is no error occurs, it means your code is good for python 2 env.
