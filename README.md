@@ -63,4 +63,4 @@ After all the MapReduce jobs were successfully executed, let's check the output:
 
 For example, Python 2 doesn't support F-string like Python 3 which can cause error when you run the MapReduce python script. Therefore, you have to use %s acts a placeholder for a string while %d acts as a placeholder for a number. [More detail](https://stackoverflow.com/questions/4288973/whats-the-difference-between-s-and-d-in-python-string-formatting/56382046)
 
-- The easiest way to check if your Python script is compatiable with python 2 is to run `python mapper1.py` or other python script in Sandbox's Web Shell Client - `http://localhost:4200`. If there is no error occurs, it means your code is good for python 2 env.
+- The easiest way to check if your Python script is compatiable with python 2 is to run `python mapper1.py` or other python script in Sandbox's Web Shell Client - `http://localhost:4200`. If there is no error occurs, it means your code is good for python 2.
