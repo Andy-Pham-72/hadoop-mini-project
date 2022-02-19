@@ -15,27 +15,34 @@ The report is stored as CSV files in HDFS with following schema:
 * Getting familiar with VirtualBox environment.
 
 ## Setting up Hadoop using Hortonworks Hadoop Sandbox
-Please follow the [Instruction video to set up Hadoop with Hortonworks Hadoop Sandbox](https://www.youtube.com/watch?v=735yx2Eak48)
+* Please follow the [Instruction video to set up Hadoop with Hortonworks Hadoop Sandbox (Cloudera)](https://www.youtube.com/watch?v=735yx2Eak48).
+    1. Install Virtual Box 
+    2. Install Cloudera HDP
+ 
+* Extra material how to move files from Linux env to HDFS and backward in [Cloudera Hadoop Virtual Machine](https://www.youtube.com/watch?v=PLEt8FuDnjk&t=409s).
 
 ## Step 1:
-From your local terminal run `upload_files.sh` to upload to the root directory in the VirtualBox:
+From your **Local Terminal** run [upload_files.sh](https://github.com/Andy-Pham-72/hadoop-mini-project/blob/master/upload_files.sh) to upload to the root directory in the VirtualBox:
+- You have to input the password of root account in order to upload the files.
 
 ![Screen Shot 2022-02-01 at 11 56 15 PM](https://user-images.githubusercontent.com/70767722/152095515-79f4aacb-7aea-47ee-94a2-e13ffa39000d.png)
 
 ## Step 2:
-From the Sandbox's Web Shell Client, logging into as `root` account and let's put the `data.csv` into hadoop file system:
+From the Sandbox's Web Shell Client - `http://localhost:4200`, logging into as `root` account and let's put the `data.csv` into hadoop file system:
 
 ```bash
 $ hadoop fs -mkdir test_dir
 $ hadoop fs -put data.csv /user/root/test_dir  
 ```
 
-double check the uploaded file in the Ambari `Files View`:
+Double check the uploaded file in the Ambari `Files View`:
+* Note: the owner of the folder and file must be `root` !
 
-![Screen Shot 2022-02-02 at 12 02 14 AM](https://user-images.githubusercontent.com/70767722/152095881-93c1f30a-d5b8-4235-ad5f-9c7babe4c3f7.png)
+<img width="1789" alt="Screen Shot 2022-02-03 at 3 24 21 PM" src="https://user-images.githubusercontent.com/70767722/152423159-470f148e-4d83-4a7d-801e-9db402a68ea2.png">
+
 
 ## Step 3: 
-From the Sandbox's Web Shell Client, run file `auto.sh`:
+From the Sandbox's Web Shell Client, run file [auto.sh](https://github.com/Andy-Pham-72/hadoop-mini-project/blob/master/auto.sh):
 
 ```bash
 $ bash auto.sh
@@ -49,4 +56,11 @@ After all the MapReduce jobs were successfully executed, let's check the output:
 * From `make_year_count` folder:
 * ![Screen Shot 2022-02-02 at 12 08 41 AM](https://user-images.githubusercontent.com/70767722/152096396-e229f5e8-57a9-45a6-8134-769be1049ef7.png)
 
+---------
 
+**NOTE**:
+- In the default Python enviroment is version 2 in VirtualBox so when you should either update the python env to 3 (or above) or tailor your code to fit the python 2.
+
+For example, Python 2 doesn't support F-string like Python 3 which can cause error when you run the MapReduce python script. Therefore, you have to use %s acts a placeholder for a string while %d acts as a placeholder for a number. [More detail](https://stackoverflow.com/questions/4288973/whats-the-difference-between-s-and-d-in-python-string-formatting/56382046)
+
+- The easiest way to check if your Python script is compatiable with python 2 is to run `python mapper1.py` or other python script in Sandbox's Web Shell Client - `http://localhost:4200`. If there is no error occurs, it means your code is good for python 2.
